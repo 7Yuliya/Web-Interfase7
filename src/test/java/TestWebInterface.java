@@ -6,10 +6,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.chrome.ChromeOptions;
 
-class TestWebInterface {
+ public class TestWebInterface {
 
-    WebDriver driver;
+   private   WebDriver driver;
 
     @BeforeAll
     static void setupAll() {
@@ -18,17 +19,21 @@ class TestWebInterface {
 
     @BeforeEach
     void setup() {
+
         driver = new ChromeDriver();
     }
 
     @AfterEach
     void teardown() {
         driver.quit();
-    }
+
+
+        }
+
 
     @Test
     void test() {
-        // Your test logic here
+       driver.get("");
     }
 
 }
